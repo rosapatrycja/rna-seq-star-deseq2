@@ -11,15 +11,15 @@ units: units.tsv
 
 trimming:
   # skip trimming: false or true
-  skip: false
+  skip: true
   # the sequencing adapter
   adapter: ACGGATCGATCGATCGATCGAT
 
 ref:
   # the STAR index
-  index: "path/to/star/index"
+  index: "/home/ajank/genome/D.melanogaster/dm6/dmel_r6.36_FB2020_05/indices/star"
   # gtf file with transcripts
-  annotation: "path/to/annotation.gtf"
+  annotation: "/home/ajank/genome/D.melanogaster/dm6/dmel_r6.36_FB2020_05/gtf/dmel-all-r6.36.gtf"
 
 pca:
   labels:
@@ -29,9 +29,9 @@ pca:
 diffexp:
   # contrasts for the deseq2 results method
   contrasts:
-    treated-vs-untreated:
-      - treated
-      - untreated
+    ML.DmBG3.c2-vs-S2.DRSC:
+      - S2.DRSC
+      - ML.DmBG3.c2
 
 params:
   star: ""

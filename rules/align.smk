@@ -27,6 +27,8 @@ rule align:
         # optional parameters
         extra="--quantMode GeneCounts --sjdbGTFfile {} {}".format(
               config["ref"]["annotation"], config["params"]["star"])
+    conda:
+        "../envs/star.yaml"
     threads: 24
     wrapper:
         "0.19.4/bio/star/align"

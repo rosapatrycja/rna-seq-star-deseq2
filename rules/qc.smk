@@ -159,6 +159,8 @@ rule multiqc:
         expand("logs/rseqc/rseqc_junction_annotation/{unit.sample}-{unit.unit}.log", unit=units.itertuples())
     output:
         "qc/multiqc_report.html"
+    conda:
+        "../envs/multiqc.yaml"
     log:
         "logs/multiqc.log"
     wrapper:
