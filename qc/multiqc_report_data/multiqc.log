@@ -1,0 +1,903 @@
+[2020-12-01 15:58:10,192] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/rosa/rna-seq-star-deseq2/.snakemake/conda/3ea53eaf/lib/python3.8/site-packages/multiqc_config.yaml
+[2020-12-01 15:58:10,193] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/rosa/.multiqc_config.yaml
+[2020-12-01 15:58:10,193] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2020-12-01 15:58:10,193] multiqc                                            [DEBUG  ]  Command used: /home/rosa/rna-seq-star-deseq2/.snakemake/conda/3ea53eaf/bin/multiqc --force -o qc -n multiqc_report.html star/S2.DRSC.16-rep1 qc/rseqc star/S2.DRSC.16-rep2 star/S2.DRSC.14-rep2 logs/rseqc/rseqc_junction_annotation star/ML.DmBG3.c2.122-rep2 star/S2.DRSC.14-rep1 star/ML.DmBG3.c2.124-rep1 star/ML.DmBG3.c2.124-rep3 star/ML.DmBG3.c2.124-rep2 star/S2.DRSC.16-rep3 star/ML.DmBG3.c2.122-rep1
+[2020-12-01 15:58:12,209] multiqc                                            [WARNING]  MultiQC Version v1.9 now available!
+[2020-12-01 15:58:12,209] multiqc                                            [INFO   ]  This is MultiQC v1.8 (a83f301)
+[2020-12-01 15:58:12,209] multiqc                                            [DEBUG  ]  Command     : /home/rosa/rna-seq-star-deseq2/.snakemake/conda/3ea53eaf/bin/multiqc --force -o qc -n multiqc_report.html star/S2.DRSC.16-rep1 qc/rseqc star/S2.DRSC.16-rep2 star/S2.DRSC.14-rep2 logs/rseqc/rseqc_junction_annotation star/ML.DmBG3.c2.122-rep2 star/S2.DRSC.14-rep1 star/ML.DmBG3.c2.124-rep1 star/ML.DmBG3.c2.124-rep3 star/ML.DmBG3.c2.124-rep2 star/S2.DRSC.16-rep3 star/ML.DmBG3.c2.122-rep1
+[2020-12-01 15:58:12,209] multiqc                                            [DEBUG  ]  Working dir : /home/rosa/rna-seq-star-deseq2
+[2020-12-01 15:58:12,209] multiqc                                            [INFO   ]  Template    : default
+[2020-12-01 15:58:12,209] multiqc                                            [DEBUG  ]  Running Python 3.8.6 | packaged by conda-forge | (default, Nov 27 2020, 19:31:52)  [GCC 9.3.0]
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/S2.DRSC.16-rep1
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/qc/rseqc
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/S2.DRSC.16-rep2
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/S2.DRSC.14-rep2
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/logs/rseqc/rseqc_junction_annotation
+[2020-12-01 15:58:12,210] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/ML.DmBG3.c2.122-rep2
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/S2.DRSC.14-rep1
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/ML.DmBG3.c2.124-rep1
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/ML.DmBG3.c2.124-rep3
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/ML.DmBG3.c2.124-rep2
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/S2.DRSC.16-rep3
+[2020-12-01 15:58:12,211] multiqc                                            [INFO   ]  Searching   : /home/rosa/rna-seq-star-deseq2/star/ML.DmBG3.c2.122-rep1
+[2020-12-01 15:58:12,212] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, mosdepth, clusterflow, bcl2fastq, interop, flash, seqyclean
+[2020-12-01 15:58:12,213] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmppfdrezjr
+[2020-12-01 15:58:12,442] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:58:12,446] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:58:12,632] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 15:58:12,669] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:12,672] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:12,672] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:12,672] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:12,672] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:12,672] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:58:14,734] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,737] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,737] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,737] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,737] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,738] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,738] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:14,738] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:58:26,194] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:26,197] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:26,197] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:26,197] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:26,197] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:26,197] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:58:27,414] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,416] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,416] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,417] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,417] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,417] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:27,452] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:58:30,075] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,078] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,078] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,078] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,078] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,079] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:30,253] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:58:41,617] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,620] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,620] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,620] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,620] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,621] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:41,682] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:58:45,492] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,495] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:45,554] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:58:49,320] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,322] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,323] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,323] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,323] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,323] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:49,380] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:58:53,113] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:53,115] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:53,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.readgc.GC_plot.pdf
+[2020-12-01 15:58:53,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.readdup.DupRate_plot.pdf
+[2020-12-01 15:58:53,165] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.readdup.seq.DupRate.xls
+[2020-12-01 15:58:53,207] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:53,210] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:53,241] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.readgc.GC_plot.pdf
+[2020-12-01 15:58:53,241] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: annotation.bed
+[2020-12-01 15:58:53,306] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,308] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,308] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,309] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,309] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,309] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:53,345] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,701] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,704] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,704] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,704] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,704] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:55,705] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,544] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.readdup.DupRate_plot.pdf
+[2020-12-01 15:58:57,544] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:58:57,544] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.junctionanno.splice_events.pdf
+[2020-12-01 15:58:57,545] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.junctionanno.splice_junction.pdf
+[2020-12-01 15:58:57,545] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.junctionanno.junction.bed
+[2020-12-01 15:58:57,545] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.junctionanno.junction.Interact.bed
+[2020-12-01 15:58:57,545] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep2.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:58:57,546] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:58:57,546] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:58:57,546] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.junctionanno.splice_events.pdf
+[2020-12-01 15:58:57,546] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.junctionanno.splice_junction.pdf
+[2020-12-01 15:58:57,546] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.junctionanno.junction.bed
+[2020-12-01 15:58:57,547] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep2.junctionanno.junction.Interact.bed
+[2020-12-01 15:58:57,655] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,657] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,657] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,657] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,658] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,658] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:57,684] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.junctionanno.junction.xls
+[2020-12-01 15:58:59,424] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.readdup.seq.DupRate.xls
+[2020-12-01 15:58:59,469] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:59,471] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:58:59,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:58:59,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.junctionanno.splice_events.pdf
+[2020-12-01 15:58:59,482] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.junctionanno.splice_junction.pdf
+[2020-12-01 15:58:59,482] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.junctionanno.junction.bed
+[2020-12-01 15:58:59,482] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.junctionanno.junction.Interact.bed
+[2020-12-01 15:58:59,482] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:58:59,483] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.readgc.GC_plot.pdf
+[2020-12-01 15:58:59,483] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep2.readdup.DupRate_plot.pdf
+[2020-12-01 15:58:59,563] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,566] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,566] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,566] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,566] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,566] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:58:59,598] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,643] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.readdup.seq.DupRate.xls
+[2020-12-01 15:59:01,697] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.readdup.DupRate_plot.r
+[2020-12-01 15:59:01,700] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep3.readdup.DupRate_plot.r
+[2020-12-01 15:59:01,741] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:01,742] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:01,792] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,794] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,794] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,795] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,795] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,795] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:01,827] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.junctionanno.junction.xls
+[2020-12-01 15:59:03,903] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.readdup.seq.DupRate.xls
+[2020-12-01 15:59:03,951] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.readdup.DupRate_plot.r
+[2020-12-01 15:59:03,953] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep3.readdup.DupRate_plot.r
+[2020-12-01 15:59:03,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.readgc.GC_plot.pdf
+[2020-12-01 15:59:03,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.junctionanno.splice_events.pdf
+[2020-12-01 15:59:03,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:03,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.junctionanno.junction.bed
+[2020-12-01 15:59:03,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:03,966] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:03,966] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:03,966] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep3.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:03,966] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.readgc.GC_plot.pdf
+[2020-12-01 15:59:03,967] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.junctionanno.splice_events.pdf
+[2020-12-01 15:59:03,967] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:03,967] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.junctionanno.junction.bed
+[2020-12-01 15:59:03,967] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:04,076] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,079] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,079] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,079] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,079] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,079] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:04,105] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:05,866] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:05,915] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:05,917] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.122-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:05,927] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep3.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:05,928] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:05,928] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:05,928] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.readgc.GC_plot.pdf
+[2020-12-01 15:59:05,928] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.junctionanno.splice_events.pdf
+[2020-12-01 15:59:05,929] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:05,929] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.junctionanno.junction.bed
+[2020-12-01 15:59:05,929] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:05,929] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.122-rep1.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:06,006] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,009] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,009] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,009] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,009] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,010] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:06,038] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:07,903] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:07,945] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:07,947] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: ML.DmBG3.c2.124-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:07,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:07,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.readgc.GC_plot.pdf
+[2020-12-01 15:59:07,979] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.junctionanno.splice_events.pdf
+[2020-12-01 15:59:07,979] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:07,979] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:07,979] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.junctionanno.junction.bed
+[2020-12-01 15:59:07,980] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:07,980] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ML.DmBG3.c2.124-rep1.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:08,061] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:08,064] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:08,118] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:08,121] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:08,172] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,174] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,174] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,174] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,175] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,175] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:08,205] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: S2.DRSC.16-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,260] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:10,260] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:10,260] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.junctionanno.splice_events.pdf
+[2020-12-01 15:59:10,261] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:10,261] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.junctionanno.junction.bed
+[2020-12-01 15:59:10,261] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:10,261] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.readgc.GC_plot.pdf
+[2020-12-01 15:59:10,330] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,332] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,332] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,333] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,333] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,333] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:10,364] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.junctionanno.junction.xls
+[2020-12-01 15:59:12,409] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:12,412] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.readdup.seq.DupRate.xls
+[2020-12-01 15:59:12,473] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:12,475] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep1.readdup.DupRate_plot.r
+[2020-12-01 15:59:12,531] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:12,531] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.16-rep1.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:12,531] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:12,531] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.readgc.GC_plot.pdf
+[2020-12-01 15:59:12,532] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.junctionanno.splice_events.pdf
+[2020-12-01 15:59:12,532] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:12,532] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.junctionanno.junction.bed
+[2020-12-01 15:59:12,532] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:12,533] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep1.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:12,601] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,604] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,604] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,604] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,604] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,604] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:12,634] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.junctionanno.junction.xls
+[2020-12-01 15:59:14,593] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.readdup.seq.DupRate.xls
+[2020-12-01 15:59:14,646] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:59:14,648] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: S2.DRSC.14-rep2.readdup.DupRate_plot.r
+[2020-12-01 15:59:14,703] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.inner_distance_freq.inner_distance_plot.pdf
+[2020-12-01 15:59:14,704] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.junctionsat.junctionSaturation_plot.pdf
+[2020-12-01 15:59:14,704] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.readgc.GC_plot.pdf
+[2020-12-01 15:59:14,704] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.junctionanno.splice_events.pdf
+[2020-12-01 15:59:14,704] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.junctionanno.splice_junction.pdf
+[2020-12-01 15:59:14,704] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.junctionanno.junction.bed
+[2020-12-01 15:59:14,705] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.junctionanno.junction.Interact.bed
+[2020-12-01 15:59:14,705] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: S2.DRSC.14-rep2.readdup.DupRate_plot.pdf
+[2020-12-01 15:59:14,715] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:59:14,717] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:59:14,888] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 15:59:14,921] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:14,923] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:14,923] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:14,923] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:14,924] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:14,924] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:16,736] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,739] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:16,740] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:28,070] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:28,073] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:28,073] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:28,073] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:28,073] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:28,074] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 15:59:29,322] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,324] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,324] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,325] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,325] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,325] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:29,361] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 15:59:32,011] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,013] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,013] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,013] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:32,189] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 15:59:43,756] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,759] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,759] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,759] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,759] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,759] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:43,816] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 15:59:47,492] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,495] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,495] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:47,550] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 15:59:51,166] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,169] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,169] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,169] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,169] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,170] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:51,224] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 15:59:54,746] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:59:54,749] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 15:59:54,920] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 15:59:54,954] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:54,956] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:54,956] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:54,957] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:54,957] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:54,957] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 15:59:56,931] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,934] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,934] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,934] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,934] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,934] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,935] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 15:59:56,935] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:08,140] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:08,142] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:08,142] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:08,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:08,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:08,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:09,384] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,387] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,387] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,387] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,387] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,388] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:09,424] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:12,087] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,089] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,090] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,090] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,090] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,090] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:12,265] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:23,533] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,536] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,536] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,536] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,536] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,537] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:23,592] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:00:27,250] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,252] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,253] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,253] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,253] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,253] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:27,309] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:00:30,908] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,910] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,911] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,911] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,911] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,911] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:30,964] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:00:34,598] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:00:34,601] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:00:34,771] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:00:34,799] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:34,802] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:34,802] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:34,802] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:34,802] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:34,802] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:00:36,337] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,339] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:36,340] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:00:47,850] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:47,853] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:47,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:47,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:47,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:47,854] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:00:49,088] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,090] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,091] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,091] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,091] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,091] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:49,128] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:00:51,759] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,761] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,761] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,762] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,762] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,762] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:00:51,937] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:02,687] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,690] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,690] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,690] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,690] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,691] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:02,749] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:06,467] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,469] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,469] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,470] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,470] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,470] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:06,529] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:10,188] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,191] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,191] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,191] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,191] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,192] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:10,247] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:13,799] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:01:13,802] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:01:13,973] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:01:14,011] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:14,014] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:14,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:14,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:14,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:14,014] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:16,091] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,093] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:16,094] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:27,775] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:27,777] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:27,777] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:27,778] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:27,778] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:27,778] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:01:29,019] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,022] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,022] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,022] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,023] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,023] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:29,059] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:01:31,716] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,719] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,719] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,719] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,719] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,719] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:31,897] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:01:42,907] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,910] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:42,970] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:01:46,748] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,750] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,750] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,751] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,751] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,751] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:46,812] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:01:50,576] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,579] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,579] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,579] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,579] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,579] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:50,636] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:01:54,292] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:01:54,295] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:01:54,466] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:01:54,499] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:54,501] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:54,501] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:54,501] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:54,502] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:54,502] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:01:56,335] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,337] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,337] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,338] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,338] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,338] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,338] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:01:56,338] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:08,122] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:08,125] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:08,125] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:08,125] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:08,125] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:08,126] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:09,361] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,363] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,363] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:09,401] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:12,058] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,061] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,061] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,061] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,061] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,061] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:12,239] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:23,445] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,448] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,448] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,448] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:23,509] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:02:27,285] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,287] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,287] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,288] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,288] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,288] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:27,348] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:02:31,140] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,143] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,143] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:31,201] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:02:34,851] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:02:34,854] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:02:35,026] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:02:35,063] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:35,065] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:35,065] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:35,065] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:35,066] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:35,066] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:02:37,068] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,071] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,071] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,071] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,072] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,072] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,072] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:37,072] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:02:49,013] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:49,015] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:49,016] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:49,016] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:49,016] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:49,016] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:02:50,287] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,289] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,289] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,290] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,290] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,290] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:50,327] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:02:52,986] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:52,989] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:52,989] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:52,989] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:52,989] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:52,989] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:02:53,168] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:04,558] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,561] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,561] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,561] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,562] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,562] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:04,623] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:08,420] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,423] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,423] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,423] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,423] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,424] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:08,482] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:12,261] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,263] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,263] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,263] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,264] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,264] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:12,322] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:16,009] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:03:16,011] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:03:16,183] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:03:16,217] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:16,219] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:16,219] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:16,219] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:16,220] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:16,220] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:18,118] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,121] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,121] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,121] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,122] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,122] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,122] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:18,122] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:29,699] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:29,702] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:29,702] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:29,702] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:29,703] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:29,703] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:03:30,939] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,942] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,942] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,942] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,942] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,942] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:30,978] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:03:33,640] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,643] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,643] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,643] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,643] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,643] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:33,814] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:03:44,784] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,787] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,787] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,787] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,787] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,787] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:44,845] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:03:48,583] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,586] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,586] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,586] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,586] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,586] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:48,647] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:03:52,503] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,505] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,506] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,506] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,506] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,506] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:52,564] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:03:56,239] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:03:56,241] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:03:56,411] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:03:56,446] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:56,449] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:56,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:56,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:56,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:56,449] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:03:58,542] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:03:58,545] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:10,208] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:10,211] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:10,211] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:10,211] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:10,211] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:10,211] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:11,476] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,478] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,478] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,479] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,479] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,479] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:11,516] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:14,177] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,179] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,179] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,180] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,180] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,180] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:14,349] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:25,287] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,290] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,290] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,290] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,291] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,291] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:25,350] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:04:29,130] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,133] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,133] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,133] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,133] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,133] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:29,191] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:04:32,995] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:32,997] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:32,997] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:32,997] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:32,998] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:32,998] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:33,053] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:04:36,706] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:04:36,709] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Log.out
+[2020-12-01 16:04:36,881] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Aligned.out.bam
+[2020-12-01 16:04:36,914] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:36,917] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:36,917] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:36,917] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:36,917] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:36,917] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SJ.out.tab
+[2020-12-01 16:04:38,808] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,811] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:38,812] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonGeTrInfo.tab
+[2020-12-01 16:04:50,528] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:50,531] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:50,531] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:50,531] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:50,531] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:50,532] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: geneInfo.tab
+[2020-12-01 16:04:51,787] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,790] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,790] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,790] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,790] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,790] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:51,827] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: transcriptInfo.tab
+[2020-12-01 16:04:54,478] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,481] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,481] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,481] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,481] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,481] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:04:54,650] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: exonInfo.tab
+[2020-12-01 16:05:05,485] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,488] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,488] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,488] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,488] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,488] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:05,548] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.fromGTF.out.tab
+[2020-12-01 16:05:09,361] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,364] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,364] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:09,424] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbInfo.txt
+[2020-12-01 16:05:13,150] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,153] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,153] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,153] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,153] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,153] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:13,209] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: sjdbList.out.tab
+[2020-12-01 16:05:17,433] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.1.1
+[2020-12-01 16:05:17,434] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.1.1
+[2020-12-01 16:05:17,436] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2020-12-01 16:05:17,447] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2020-12-01 16:05:17,458] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2020-12-01 16:05:17,468] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2020-12-01 16:05:17,478] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2020-12-01 16:05:17,490] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2020-12-01 16:05:17,501] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2020-12-01 16:05:17,511] multiqc                                            [DEBUG  ]  No samples found: quast
+[2020-12-01 16:05:17,522] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2020-12-01 16:05:17,533] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2020-12-01 16:05:17,543] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2020-12-01 16:05:17,588] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 read_distribution reports
+[2020-12-01 16:05:17,615] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 inner_distance reports
+[2020-12-01 16:05:17,627] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 read_gc reports
+[2020-12-01 16:05:17,682] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 read_duplication reports
+[2020-12-01 16:05:17,694] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 junction_annotation reports
+[2020-12-01 16:05:17,696] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'ML.DmBG3.c2.122-rep2.junctionsat'
+[2020-12-01 16:05:17,696] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'ML.DmBG3.c2.124-rep2.junctionsat'
+[2020-12-01 16:05:17,697] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'S2.DRSC.16-rep2.junctionsat'
+[2020-12-01 16:05:17,697] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'S2.DRSC.16-rep3.junctionsat'
+[2020-12-01 16:05:17,698] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'ML.DmBG3.c2.124-rep3.junctionsat'
+[2020-12-01 16:05:17,699] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'ML.DmBG3.c2.122-rep1.junctionsat'
+[2020-12-01 16:05:17,699] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'ML.DmBG3.c2.124-rep1.junctionsat'
+[2020-12-01 16:05:17,700] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'S2.DRSC.16-rep1.junctionsat'
+[2020-12-01 16:05:17,700] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'S2.DRSC.14-rep1.junctionsat'
+[2020-12-01 16:05:17,701] multiqc.modules.rseqc.junction_saturation          [WARNING]  Junction saturation data all zeroes, skipping: 'S2.DRSC.14-rep2.junctionsat'
+[2020-12-01 16:05:17,782] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 10 bam_stat reports
+[2020-12-01 16:05:17,795] multiqc                                            [DEBUG  ]  No samples found: busco
+[2020-12-01 16:05:17,805] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2020-12-01 16:05:17,816] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2020-12-01 16:05:17,826] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2020-12-01 16:05:17,842] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2020-12-01 16:05:17,852] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2020-12-01 16:05:17,862] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2020-12-01 16:05:17,873] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2020-12-01 16:05:17,883] multiqc                                            [DEBUG  ]  No samples found: happy
+[2020-12-01 16:05:17,895] multiqc                                            [DEBUG  ]  No samples found: homer
+[2020-12-01 16:05:17,905] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2020-12-01 16:05:17,915] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2020-12-01 16:05:17,925] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2020-12-01 16:05:17,937] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2020-12-01 16:05:17,948] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2020-12-01 16:05:17,959] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2020-12-01 16:05:17,969] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2020-12-01 16:05:17,979] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2020-12-01 16:05:17,989] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2020-12-01 16:05:18,000] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2020-12-01 16:05:18,018] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2020-12-01 16:05:18,028] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2020-12-01 16:05:18,038] multiqc                                            [DEBUG  ]  No samples found: picard
+[2020-12-01 16:05:18,048] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2020-12-01 16:05:18,058] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2020-12-01 16:05:18,071] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2020-12-01 16:05:18,081] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2020-12-01 16:05:18,092] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2020-12-01 16:05:18,102] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2020-12-01 16:05:18,114] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2020-12-01 16:05:18,125] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2020-12-01 16:05:18,135] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2020-12-01 16:05:18,151] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2020-12-01 16:05:18,162] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2020-12-01 16:05:18,173] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2020-12-01 16:05:18,183] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2020-12-01 16:05:18,194] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2020-12-01 16:05:18,204] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2020-12-01 16:05:18,214] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2020-12-01 16:05:18,224] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2020-12-01 16:05:18,235] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2020-12-01 16:05:18,335] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: S2.DRSC.16-rep1
+[2020-12-01 16:05:18,407] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: S2.DRSC.16-rep2
+[2020-12-01 16:05:18,478] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: S2.DRSC.14-rep2
+[2020-12-01 16:05:18,548] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: ML.DmBG3.c2.122-rep2
+[2020-12-01 16:05:18,622] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: S2.DRSC.14-rep1
+[2020-12-01 16:05:18,693] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: ML.DmBG3.c2.124-rep1
+[2020-12-01 16:05:18,768] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: ML.DmBG3.c2.124-rep3
+[2020-12-01 16:05:18,839] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: ML.DmBG3.c2.124-rep2
+[2020-12-01 16:05:18,912] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: S2.DRSC.16-rep3
+[2020-12-01 16:05:18,983] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: ML.DmBG3.c2.122-rep1
+[2020-12-01 16:05:18,983] multiqc.modules.star.star                          [INFO   ]  Found 10 reports and 10 gene count files
+[2020-12-01 16:05:19,000] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2020-12-01 16:05:19,010] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2020-12-01 16:05:19,020] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2020-12-01 16:05:19,030] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2020-12-01 16:05:19,040] multiqc                                            [DEBUG  ]  No samples found: kat
+[2020-12-01 16:05:19,050] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2020-12-01 16:05:19,060] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2020-12-01 16:05:19,070] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2020-12-01 16:05:19,080] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2020-12-01 16:05:19,090] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2020-12-01 16:05:19,101] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2020-12-01 16:05:19,111] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2020-12-01 16:05:19,121] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2020-12-01 16:05:19,131] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2020-12-01 16:05:19,142] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2020-12-01 16:05:19,152] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2020-12-01 16:05:19,162] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2020-12-01 16:05:19,173] multiqc                                            [DEBUG  ]  No samples found: fastqc
+[2020-12-01 16:05:19,183] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2020-12-01 16:05:19,193] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2020-12-01 16:05:19,203] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2020-12-01 16:05:19,214] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2020-12-01 16:05:19,224] multiqc                                            [DEBUG  ]  No samples found: interop
+[2020-12-01 16:05:19,234] multiqc                                            [DEBUG  ]  No samples found: flash
+[2020-12-01 16:05:19,245] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2020-12-01 16:05:19,272] multiqc                                            [INFO   ]  Compressing plot data
+[2020-12-01 16:05:19,791] multiqc                                            [INFO   ]  Report      : qc/multiqc_report.html
+[2020-12-01 16:05:19,791] multiqc                                            [INFO   ]  Data        : qc/multiqc_report_data
+[2020-12-01 16:05:19,792] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_qualimap_bamqc_genome_results.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,792] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_rseqc_read_distribution.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,792] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_rseqc_junction_annotation.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,792] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_rseqc_bam_stat.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,793] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_star.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,793] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_general_stats.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,793] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_sources.txt' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:19,793] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppfdrezjr/multiqc_data/multiqc_data.json' to 'qc/multiqc_report_data'
+[2020-12-01 16:05:20,109] multiqc                                            [INFO   ]  MultiQC complete

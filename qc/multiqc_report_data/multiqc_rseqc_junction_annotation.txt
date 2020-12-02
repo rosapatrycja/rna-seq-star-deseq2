@@ -1,0 +1,11 @@
+Sample	total_splicing_events	known_splicing_events	partial_novel_splicing_events	novel_splicing_events	total_splicing_junctions	known_splicing_junctions	partial_novel_splicing_junctions	novel_splicing_junctions	known_splicing_events_pct	partial_novel_splicing_events_pct	novel_splicing_events_pct	known_splicing_junctions_pct	partial_novel_splicing_junctions_pct	novel_splicing_junctions_pct
+ML.DmBG3.c2.122-rep1	403412	0	0	403033	26970	0	0	26970	0.0	0.0	99.90605138171398	0.0	0.0	100.0
+ML.DmBG3.c2.122-rep2	202324	0	0	202133	25207	0	0	25207	0.0	0.0	99.90559696328661	0.0	0.0	100.0
+ML.DmBG3.c2.124-rep1	358665	0	0	358337	28337	0	0	28337	0.0	0.0	99.90854976091896	0.0	0.0	100.0
+ML.DmBG3.c2.124-rep2	364993	0	0	364644	33416	0	0	33416	0.0	0.0	99.90438172786875	0.0	0.0	100.0
+ML.DmBG3.c2.124-rep3	538639	0	0	538105	29400	0	0	29400	0.0	0.0	99.90086124472978	0.0	0.0	100.0
+S2.DRSC.14-rep1	727448	0	0	726796	31330	0	0	31330	0.0	0.0	99.9103716004443	0.0	0.0	100.0
+S2.DRSC.14-rep2	592618	0	0	592081	29513	0	0	29513	0.0	0.0	99.90938513511233	0.0	0.0	100.0
+S2.DRSC.16-rep1	660381	0	0	659657	31989	0	0	31989	0.0	0.0	99.89036631883715	0.0	0.0	100.0
+S2.DRSC.16-rep2	347439	0	0	347055	26481	0	0	26481	0.0	0.0	99.88947700171829	0.0	0.0	100.0
+S2.DRSC.16-rep3	555717	0	0	555057	30850	0	0	30850	0.0	0.0	99.88123451325045	0.0	0.0	100.0
