@@ -32,6 +32,12 @@ diffexp:
     ML.DmBG3.c2-vs-S2.DRSC:
       - S2.DRSC
       - ML.DmBG3.c2
+    CNS-vs-S2.DRSC:
+      - S2.DRSC
+      - CNS
+    CNS-vs-ML.DmBG3.c2:
+      - ML.DmBG3.c2
+      - CNS
 
 params:
   star: ""

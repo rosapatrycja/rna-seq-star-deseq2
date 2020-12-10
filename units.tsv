@@ -9,3 +9,6 @@ S2.DRSC.14	rep2	SRR015106_1.fastq.gz	SRR015106_2.fastq.gz
 S2.DRSC.16	rep1	SRR015108_1.fastq.gz	SRR015108_2.fastq.gz
 S2.DRSC.16	rep2	SRR015110_1.fastq.gz	SRR015110_2.fastq.gz
 S2.DRSC.16	rep3	SRR015112_1.fastq.gz	SRR015112_2.fastq.gz
+CNS.1	rep1	w1118r1_CATTCA-CTGATC_R1_001.fastq.gz	w1118r1_CATTCA-CTGATC_R2_001.fastq.gz
+CNS.2	rep1	w1118r2_TTGCGG_R1_001.fastq.gz	w1118r2_TTGCGG_R2_001.fastq.gz
+CNS.3	rep1	w1118r3_GCTACC_R1_001.fastq.gz	w1118r3_GCTACC_R2_001.fastq.gz
