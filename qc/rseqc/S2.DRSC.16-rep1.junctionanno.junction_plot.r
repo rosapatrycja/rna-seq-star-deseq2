@@ -1,8 +1,0 @@
-pdf("qc/rseqc/S2.DRSC.16-rep1.junctionanno.splice_events.pdf")
-events=c(0.0,99.89036631883715,0.0)
-pie(events,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing events",labels=c("partial_novel 0%","complete_novel 100%","known 0%"))
-dev.off()
-pdf("qc/rseqc/S2.DRSC.16-rep1.junctionanno.splice_junction.pdf")
-junction=c(0.0,100.0,0.0)
-pie(junction,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing junctions",labels=c("partial_novel 0%","complete_novel 100%","known 0%"))
-dev.off()
