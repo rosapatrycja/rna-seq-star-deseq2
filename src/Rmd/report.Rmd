@@ -1,7 +1,7 @@
 ---
-title: "BG3 vs S2 analysis"
-author: "Patrycja Rosa"
-date: "`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`"
+title: 'BG3 vs S2 analysis'
+author: 'Patrycja Rosa'
+date: '`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`'
 output: html_document
 ---
 > Some introductory text here 
