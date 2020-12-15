@@ -1,0 +1,261 @@
+---
+title: 'BG3, S2 and Central nervous system cells analysis'
+author: 'Patrycja Rosa'
+date: '`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`'
+output: html_document
+---
+> Some introductory text here 
+
+
+```{r, echo=FALSE, message=FALSE}
+library(edgeR)
+library(umap)
+library(ggplot2)
+library(limma)
+library(VennDiagram)
+library(pheatmap)
+library(RColorBrewer)
+```
+
+```{r, echo=FALSE}
+#read counts file 
+data <- read.delim('P:/Desktop/work/rna-seq-cns/all.tsv')
+
+#counts 
+rownames(data) <- data[,1]
+data <- data[,-1]
+data_cpm <- cpm(data)
+
+#samples
+samples <- c("CNS", "CNS", "CNS", "Ml_DmBG3.c2", "Ml_DmBG3.c2", "S2.DRSC", "S2.DRSC")
+samples <- cbind(colnames(data),samples)
+colnames(samples) <- c("sample_id", "celltype")
+rownames(samples) <- colnames(data)
+
+#genes
+genes <- rownames(data)
+
+#make dge object for further analysis
+dge_object <- DGEList(counts = data, samples = samples, genes = genes)
+
+#filtering by variance
+keep <- filterByExpr(dge_object, group=dge_object$samples$celltype)
+
+#sum(keep)/length(keep)
+data_filtered <- dge_object[keep, , keep.lib.sizes=FALSE]
+
+#normalization
+data_norm<-calcNormFactors(data_filtered)
+
+#counts per million
+cpms <- cpm(data_norm)
+data_cpm <- data_norm
+data_cpm$counts <- cpms
+
+```
+### Table with gene numbers
+Gene set    | Count
+------------|----------------:
+Input genes | `r format(dim(data)[1], big.mark=',')`
+Genes after filtering | `r format(dim(data_filtered)[1], big.mark=',')`
+
+### PCA
+
+```{r, echo=FALSE}
+
+#labels for plots
+labels <- c(CNS = "Central nervous system", Ml_DmBG3.c2 = "BG3", S2.DRSC= "S2")
+
+
+#PCA
+gene_pca <- prcomp(t(data_cpm$counts))
+pca_out <- as.data.frame(gene_pca$x)
+pca_out$celltype <- data_cpm$samples$celltype
+
+percentage <- round(gene_pca$sdev / sum(gene_pca$sdev) * 100, 2)
+percentage <- paste( colnames(pca_out), "(", paste( as.character(percentage), "%", ")", sep="") )
+
+
+pc<-ggplot(pca_out,aes(x=PC1,y=PC2, color= celltype))
+pc<-pc+geom_point(size=4)+scale_color_brewer(palette= 'Set1', labels=labels)+ xlab(percentage[1]) + ylab(percentage[2])
+pc
+#model matrix
+design <- model.matrix(~0 +data_norm$samples$celltype)
+rownames(design) <- data_norm$samples$sample_id
+
+
+#estimate dispertion
+y <- estimateDisp(data_norm, design, robust = TRUE)
+
+#fit the model into data
+fit <- glmQLFit(y, design)
+
+#qlf test
+qlf_CNSvsS2 <- glmQLFTest(fit, contrast = c(1,0,-1))
+qlf_CNSvsBG3 <- glmQLFTest(fit, contrast = c(1,-1,0))
+qlf_BG3vsS2 <- glmQLFTest(fit, contrast = c(0,1,-1))
+
+fdr_adjust <- function(qlf_data) {
+  
+  #multiple testing correction method
+  FDR.data <- p.adjust(qlf_data$table$PValue, method = "BH")
+  #add p-adjusted value into summary table 
+  qlf_data$table$adjPValue <- FDR.data
+  qlf_data
+}
+
+CNSvsS2_adj <- fdr_adjust(qlf_CNSvsS2)
+CNSvsBG3_adj <- fdr_adjust(qlf_CNSvsBG3)
+BG3vsS2_adj <- fdr_adjust(qlf_BG3vsS2)
+
+significant_genes <- function(qlf_data,alpha,logfc) {
+  #choose genes with abs(logfoldchange) >2 and adjusted p-value<0.05
+  thresh_data <- qlf_data[which(abs(qlf_data$table$logFC)>logfc & qlf_data$table$adjPValue<alpha),]
+  
+  
+}
+
+CNSvsS2_dge <- significant_genes(CNSvsS2_adj,alpha = 0.05, logfc = 2)
+CNSvsBG3_dge <- significant_genes(CNSvsBG3_adj,alpha = 0.05, logfc = 2)
+BG3vsS2_dge<- significant_genes(BG3vsS2_adj,alpha = 0.05, logfc = 2)
+
+
+```
+
+
+Gene set    | Count
+------------|----------------:
+Central nervous system vs S2  | `r format(dim(CNSvsS2_dge)[1], big.mark=',')`
+Central nervous system vs BG3  | `r format(dim(CNSvsBG3_dge)[1], big.mark=',')`
+BG3 vs S2  | `r format(dim(BG3vsS2_dge)[1], big.mark=',')`
+
+### Venn Diagram
+
+```{r, echo=FALSE}
+#areas
+area_CNSvsS2 <- dim(CNSvsS2_dge)
+area_CNSvsBG3<-dim(CNSvsBG3_dge)
+area_BG3vsS2 <- dim(BG3vsS2_dge)
+
+#intersections
+inter_CNS <- intersect(rownames(CNSvsS2_dge), rownames(CNSvsBG3_dge))
+inter_S2 <- intersect(rownames(CNSvsS2_dge), rownames(BG3vsS2_dge))
+inter_BG3 <- intersect(rownames(CNSvsBG3_dge), rownames(BG3vsS2_dge))
+inter_CNS.S2.BG3 <- intersect(inter_CNS, rownames(BG3vsS2_dge))
+
+
+
+#Venn diagram
+grid.newpage()
+venn.plot<-draw.triple.venn(area1=area_CNSvsS2[1], area2=area_CNSvsBG3[1], area3=area_BG3vsS2[1],
+                            n12=length(inter_CNS), n23=length(inter_S2), n13=length(inter_BG3), n123=length(inter_CNS.S2.BG3),
+                            category = c("cns vs s2","cns vs bg3","bg3 vs s2"),
+                            fill = c("blue", "green", "orange"),
+                            lty = "blank",
+                            alpha = rep(0.5, 3),
+                            cex= rep(2, 7),
+                            cat.cex = rep(1.3, 3))
+counts_heatmap <- function(counts_matrix, cluster, rownames_value) { 
+  
+  pheatmap(mat = log10(1+counts_matrix), 
+           col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
+           cluster_rows = cluster,
+           cluster_cols = FALSE, 
+           clustering_distance_rows = "euclidean",
+           clustering_method = "complete", 
+           show_rownames = rownames_value)
+  
+}
+```
+
+### Expression levels for differentialy expressed genes in Central nervous system vs S2
+
+```{r, echo=FALSE}
+CNSvsS2_data <- data_cpm[which(rownames(data_cpm) %in% rownames(CNSvsS2_dge)),]
+counts_heatmap(CNSvsS2_data$counts, cluster = TRUE, rownames_value = F)
+
+
+```
+
+### Expression levels for differentialy expressed genes in Central nervous system vs BG3
+
+```{r, echo=FALSE}
+CNSvsBG3_data <- data_cpm[which(rownames(data_cpm) %in% rownames(CNSvsBG3_dge)),]
+counts_heatmap(CNSvsBG3_data$counts, cluster = TRUE, rownames_value = F)
+
+```
+
+### Expression levels for differentialy expressed genes in BG3 vs S2
+
+```{r, echo=FALSE}
+
+BG3vsS2_data <- data_cpm[which(rownames(data_cpm) %in% rownames(BG3vsS2_dge)),]
+counts_heatmap(BG3vsS2_data$counts, cluster = TRUE, rownames_value = F)
+
+maxlogfc_genes <- function(mat,N,cpm_matrix) {
+  #sort genes by decreasing absolute value of logfc
+  sortedgenes <- mat[order(abs(mat$table$logFC),decreasing = TRUE),]
+  #N genes with  max logfoldchange
+  sortedgenes_N <- sortedgenes$table[1:N,]
+  #order by increasing log fold change value
+  sortedgenes_N <- sortedgenes_N[order(sortedgenes_N$logFC, decreasing = TRUE), ]
+  #sorted log fold change values
+  sorted_logfc <- sortedgenes_N[,1,drop = FALSE]
+  #counts matrix
+  sortedcounts <- cpm_matrix[which(rownames(cpm_matrix) %in% rownames(sortedgenes_N)),]
+  #sort by log fold change value
+  sortedcounts <- sortedcounts[rownames(sortedgenes_N),]
+  return(list(counts=sortedcounts$counts,logFC=sorted_logfc))
+}
+
+sortedcounts_CNSvsS2<- maxlogfc_genes(CNSvsS2_dge,100,data_cpm)
+sortedcounts_CNSvsBG3 <- maxlogfc_genes(CNSvsBG3_dge,100,data_cpm)
+sortedcounts_BG3vsS2 <- maxlogfc_genes(BG3vsS2_dge,100,data_cpm)
+
+```
+
+
+### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in Central nervous system and S2 contrast
+
+```{r, echo=FALSE, fig.height=7}
+
+pheatmap(mat = log10(sortedcounts_CNSvsS2$counts+1),
+         col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
+         cluster_rows = FALSE,
+         cluster_cols = FALSE,
+         annotation_row = sortedcounts_CNSvsS2$logFC,
+         annotation_colors = list(logFC = brewer.pal(5, "PRGn")),
+         show_rownames = T)
+
+```
+
+
+### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in Central nervous system and BG3 contrast
+
+```{r, echo=FALSE, fig.height=7}
+
+pheatmap(mat = log10(sortedcounts_CNSvsBG3$counts+1),
+         col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
+         cluster_rows = FALSE,
+         cluster_cols = FALSE,
+         annotation_row = sortedcounts_CNSvsBG3$logFC,
+         annotation_colors = list(logFC = brewer.pal(5, "PRGn")),
+         show_rownames = T)
+
+```
+
+
+### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in BG3 and S2 contrast
+
+```{r, echo=FALSE, fig.height=7}
+
+pheatmap(mat = log10(sortedcounts_BG3vsS2$counts+1),
+         col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
+         cluster_rows = FALSE,
+         cluster_cols = FALSE,
+         annotation_row = sortedcounts_BG3vsS2$logFC,
+         annotation_colors = list(logFC = brewer.pal(5, "PRGn")),
+         show_rownames = T)
+
+
+```
