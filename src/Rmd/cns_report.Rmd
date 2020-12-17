@@ -113,6 +113,26 @@ CNSvsS2_adj <- fdr_adjust(qlf_CNSvsS2)
 CNSvsBG3_adj <- fdr_adjust(qlf_CNSvsBG3)
 BG3vsS2_adj <- fdr_adjust(qlf_BG3vsS2)
 
+#save data into tsv file
+gene_table <- NULL
+gene_table_data <- list(CNSvsS2 = CNSvsS2_adj, CNSvsBG3 = CNSvsBG3_adj , BG3vsS2 = BG3vsS2_adj)
+
+for (gtd in names(gene_table_data))
+{
+  # put all the gene annotations before the logFC/adjPValue columns
+  # these annotations will be useful for downstream analysis
+  if (is.null(gene_table))
+    gene_table <- gene_table_data[[gtd]]$genes
+  # append the logFC/adjPValue columns, with an appropriate prefix
+  this_gt <- gene_table_data[[gtd]]$table[, c("logFC", "adjPValue")]
+  names(this_gt) <- paste0(gtd, ".", names(this_gt))
+  gene_table <- cbind(gene_table, this_gt)
+}
+
+write.table(gene_table, "~/rna-seq-star-deseq2/src/Rmd/gene_table.tsv", quote = F, sep = "\t", row.names = F)
+
+
+
 significant_genes <- function(qlf_data,alpha,logfc) {
   #choose genes with abs(logfoldchange) >2 and adjusted p-value<0.05
   thresh_data <- qlf_data[which(abs(qlf_data$table$logFC)>logfc & qlf_data$table$adjPValue<alpha),]
