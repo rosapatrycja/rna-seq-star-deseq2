@@ -18,8 +18,13 @@ library(RColorBrewer)
 ```
 
 ```{r, echo=FALSE}
+
+# for plotting, take the genes with abs(log2 fold change) > 2 and adjusted p-va$
+thr_logfc = 2
+thr_alpha = 0.05
+
 #read counts file 
-data <- read.delim('P:/Desktop/work/rna-seq-cns/all.tsv')
+data <- read.delim('~/rna-seq-star-deseq2/counts$/all.tsv')
 
 #counts 
 rownames(data) <- data[,1]
@@ -115,9 +120,9 @@ significant_genes <- function(qlf_data,alpha,logfc) {
   
 }
 
-CNSvsS2_dge <- significant_genes(CNSvsS2_adj,alpha = 0.05, logfc = 2)
-CNSvsBG3_dge <- significant_genes(CNSvsBG3_adj,alpha = 0.05, logfc = 2)
-BG3vsS2_dge<- significant_genes(BG3vsS2_adj,alpha = 0.05, logfc = 2)
+CNSvsS2_dge <- significant_genes(CNSvsS2_adj,alpha = thr_alpha, logfc = thr_logfc)
+CNSvsBG3_dge <- significant_genes(CNSvsBG3_adj,alpha = thr_alpha, logfc = thr_logfc)
+BG3vsS2_dge<- significant_genes(BG3vsS2_adj,alpha = thr_alpha, logfc = thr_logfc)
 
 
 ```
@@ -155,6 +160,31 @@ venn.plot<-draw.triple.venn(area1=area_CNSvsS2[1], area2=area_CNSvsBG3[1], area3
                             alpha = rep(0.5, 3),
                             cex= rep(2, 7),
                             cat.cex = rep(1.3, 3))
+```
+
+### The differences in gene expression level between central nervous system cells and S2 cells
+
+```{r, echo = FALSE}
+plotSmear(CNSvsS2_adj, de.tags=rownames(CNSvsS2_dge$table), pch=20, cex=0.6)
+abline(h=c(-1, 0, 1), col=c("dodgerblue","yellow","dodgerblue"), lty=2)
+```
+
+### The differences in gene expression level between central nervous system cells and BG3 cells
+
+```{r, echo = FALSE}
+plotSmear(CNSvsBG3_adj, de.tags=rownames(CNSvsBG3_dge$table), pch=20, cex=0.6)
+abline(h=c(-1, 0, 1), col=c("dodgerblue","yellow","dodgerblue"), lty=2)
+```
+
+### The differences in gene expression level between BG3 and S2 cells
+
+```{r, echo = FALSE}
+plotSmear(BG3vsS2_adj, de.tags=rownames(BG3vsS2_dge$table), pch=20, cex=0.6)
+abline(h=c(-1, 0, 1), col=c("dodgerblue","yellow","dodgerblue"), lty=2)
+
+```
+
+```{r, echo=FALSE}
 counts_heatmap <- function(counts_matrix, cluster, rownames_value) { 
   
   pheatmap(mat = log10(1+counts_matrix), 

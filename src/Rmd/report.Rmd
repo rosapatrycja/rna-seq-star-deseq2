@@ -23,13 +23,13 @@ logfc = 2
 alpha = 0.05 
 
 #read counts file 
-data <- read.delim('P:/Desktop/work/rna-seq-bg3/all.tsv')
+data <- read.delim('~/rna-seq-star-deseq2/counts_1/all.tsv')
 rownames(data) <- data[,1]
 data <- data[,-1]
 data_cpm <- cpm(data)
 
 #read model statistics value table 
-statistics <- read.table('P:/Desktop/work/rna-seq-bg3/ML.DmBG3.c2-vs-S2.DRSC.diffexp.tsv')
+statistics <- read.table('~/rna-seq-star-deseq2/deseq2_1/ML.DmBG3.c2-vs-S2.DRSC.diffexp.tsv')
 
 #differential expressed genes 
 diffexp <- statistics[which(abs(statistics$log2FoldChange)>2 & statistics$padj < 0.05),]
