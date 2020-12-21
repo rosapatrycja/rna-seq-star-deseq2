@@ -9,7 +9,7 @@ output: html_document
 
 ```{r, echo=FALSE, message=FALSE}
 library(edgeR)
-library(umap)
+library(biomaRt)
 library(ggplot2)
 library(limma)
 library(VennDiagram)
@@ -40,8 +40,31 @@ rownames(samples) <- colnames(data)
 #genes
 genes <- rownames(data)
 
+#using biomart for getting gene names
+mart<-useMart(biomart = "ensembl",
+              dataset = "dmelanogaster_gene_ensembl",
+              host="ensembl.org")
+
+genes_mart <- getBM(
+  filters="ensembl_gene_id",
+  attributes=c("ensembl_gene_id", "external_gene_name", "chromosome_name", "start_position", "end_position"),
+  values=genes,
+  mart=mart)
+rownames(genes_mart) <- genes_mart$ensembl_gene_id
+
+#counts
+data <- data[which(rownames(data) %in% rownames(genes_mart)),]
+
+#genes
+genes_mart <- genes_mart[order(match(rownames(genes_mart), rownames(data))), , drop = FALSE]
+
 #make dge object for further analysis
-dge_object <- DGEList(counts = data, samples = samples, genes = genes)
+dge_object <- DGEList(counts = data, samples = samples, genes = genes_mart)
+
+#change rownames in counts and genes
+rownames(dge_object$genes) <- dge_object$genes$external_gene_name
+rownames(dge_object$counts) <- dge_object$genes$external_gene_name
+
 
 #filtering by variance
 keep <- filterByExpr(dge_object, group=dge_object$samples$celltype)
@@ -258,14 +281,14 @@ maxlogfc_genes <- function(mat,N,cpm_matrix) {
   return(list(counts=sortedcounts$counts,logFC=sorted_logfc))
 }
 
-sortedcounts_CNSvsS2<- maxlogfc_genes(CNSvsS2_dge,100,data_cpm)
-sortedcounts_CNSvsBG3 <- maxlogfc_genes(CNSvsBG3_dge,100,data_cpm)
-sortedcounts_BG3vsS2 <- maxlogfc_genes(BG3vsS2_dge,100,data_cpm)
+sortedcounts_CNSvsS2<- maxlogfc_genes(CNSvsS2_dge,50,data_cpm)
+sortedcounts_CNSvsBG3 <- maxlogfc_genes(CNSvsBG3_dge,50,data_cpm)
+sortedcounts_BG3vsS2 <- maxlogfc_genes(BG3vsS2_dge,50,data_cpm)
 
 ```
 
 
-### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in Central nervous system and S2 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in Central nervous system and S2 contrast
 
 ```{r, echo=FALSE, fig.height=7}
 
@@ -280,7 +303,7 @@ pheatmap(mat = log10(sortedcounts_CNSvsS2$counts+1),
 ```
 
 
-### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in Central nervous system and BG3 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in Central nervous system and BG3 contrast
 
 ```{r, echo=FALSE, fig.height=7}
 
@@ -295,7 +318,7 @@ pheatmap(mat = log10(sortedcounts_CNSvsBG3$counts+1),
 ```
 
 
-### Expression levels for 100 differentialy expressed genes with the highest value of log fold change in BG3 and S2 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in BG3 and S2 contrast
 
 ```{r, echo=FALSE, fig.height=7}
 
