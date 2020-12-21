@@ -4,7 +4,7 @@ author: 'Patrycja Rosa'
 date: '`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`'
 output: html_document
 ---
-> Some introductory text here 
+> Compile with `Rscript -e 'rmarkdown::render("src/Rmd/cns_report.Rmd")'`
 
 
 ```{r, echo=FALSE, message=FALSE}
@@ -24,7 +24,7 @@ thr_logfc = 2
 thr_alpha = 0.05
 
 #read counts file 
-data <- read.delim('~/rna-seq-star-deseq2/counts$/all.tsv')
+data <- read.delim('../../counts/all.tsv')
 
 #counts 
 rownames(data) <- data[,1]
@@ -152,7 +152,7 @@ for (gtd in names(gene_table_data))
   gene_table <- cbind(gene_table, this_gt)
 }
 
-write.table(gene_table, "~/rna-seq-star-deseq2/src/Rmd/gene_table.tsv", quote = F, sep = "\t", row.names = F)
+write.table(gene_table, "../../src/Rmd/gene_table.tsv", quote = F, sep = "\t", row.names = F)
 
 
 
