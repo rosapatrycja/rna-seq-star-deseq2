@@ -4,10 +4,18 @@ author: 'Patrycja Rosa'
 date: '`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`'
 output: html_document
 ---
-> RNA sequencing data came from the study of Cherbas et al. “The transcriptional diversity of 25 Drosophila cell lines” (Genome Res. 2011 Feb; 21(2): 301–314).
+> RNA sequencing data came from the study of Cherbas et al. 
+“The transcriptional diversity of 25 Drosophila cell lines” 
+(Genome Res. 2011 Feb; 21(2): 301–314).
 
-The data were subjected to pre-processing, filtering and normalization. Linear (Principal Component Analysis) dimensionality reduction methods was applied. The statistical analysis was based on the negative binomial regression, with empirical Bayes parameter estimation and quasi-likelihood F-test. Multiple testing problem was addressed by using Benjamini-Hochberg correction method.
-The computational analysis was made using edgeR library. Library biomaRt was used to get gene names and chromosome locations. Ggplot2, VennDiagram, pheatmap and RColorBrewer libraries were used for visualization of the results.
+The data were subjected to pre-processing, filtering and normalization. 
+Linear (Principal Component Analysis) dimensionality reduction methods was applied. 
+The statistical analysis was based on the negative binomial regression, 
+with empirical Bayes parameter estimation and quasi-likelihood F-test. 
+Multiple testing problem was addressed by using Benjamini-Hochberg correction method.
+The computational analysis was made using edgeR library. 
+Library biomaRt was used to get gene names and chromosome locations. 
+Ggplot2, VennDiagram, pheatmap and RColorBrewer libraries were used for visualization of the results.
 
 ```{r, echo=FALSE, message=FALSE}
 library(edgeR)
