@@ -58,7 +58,7 @@ mart<-useMart(biomart = "ensembl",
 
 genes_mart <- getBM(
   filters="ensembl_gene_id",
-  attributes=c("ensembl_gene_id", "external_gene_name", "chromosome_name", "start_position", "end_position"),
+  attributes=c("ensembl_gene_id", "external_gene_name", "chromosome_name", "start_position", "end_position", "strand"),
   values=genes,
   mart=mart)
 rownames(genes_mart) <- genes_mart$ensembl_gene_id
