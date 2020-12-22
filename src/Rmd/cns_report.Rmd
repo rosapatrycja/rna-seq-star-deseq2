@@ -1,5 +1,5 @@
 ---
-title: 'BG3, S2 and Central nervous system cells analysis'
+title: 'BG3, S2 and central nervous system cells analysis'
 author: 'Patrycja Rosa'
 date: '`r sub("^0", "", format(Sys.time(), "%d %B %Y"))`'
 output: html_document
@@ -26,7 +26,7 @@ library(pheatmap)
 library(RColorBrewer)
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 
 # for plotting, take the genes with abs(log2 fold change) > 2 and adjusted p-va$
 thr_logfc = 2
@@ -94,9 +94,9 @@ data_cpm$counts <- cpms
 Gene set    | Count
 ------------|----------------:
 Input genes | `r format(dim(data)[1], big.mark=',')`
-Genes after filtering | `r format(dim(data_filtered)[1], big.mark=',')`
+Genes after removing low-expressed ones using edgeR::filterByExpr | `r format(dim(data_filtered)[1], big.mark=',')`
 
-### PCA
+### Principal Component. Analysis
 
 ```{r, echo=FALSE}
 
@@ -110,7 +110,7 @@ pca_out <- as.data.frame(gene_pca$x)
 pca_out$celltype <- data_cpm$samples$celltype
 
 percentage <- round(gene_pca$sdev / sum(gene_pca$sdev) * 100, 2)
-percentage <- paste( colnames(pca_out), "(", paste( as.character(percentage), "%", ")", sep="") )
+percentage <- paste0( colnames(pca_out), " (", paste0( as.character(percentage), "%", ")") )
 
 
 pc<-ggplot(pca_out,aes(x=PC1,y=PC2, color= celltype))
@@ -206,7 +206,7 @@ inter_CNS.S2.BG3 <- intersect(inter_CNS, rownames(BG3vsS2_dge))
 grid.newpage()
 venn.plot<-draw.triple.venn(area1=area_CNSvsS2[1], area2=area_CNSvsBG3[1], area3=area_BG3vsS2[1],
                             n12=length(inter_CNS), n23=length(inter_S2), n13=length(inter_BG3), n123=length(inter_CNS.S2.BG3),
-                            category = c("cns vs s2","cns vs bg3","bg3 vs s2"),
+                            category = c("CNS vs S2","CNS vs BG3","BG3 vs S2"),
                             fill = c("blue", "green", "orange"),
                             lty = "blank",
                             alpha = rep(0.5, 3),
@@ -214,21 +214,21 @@ venn.plot<-draw.triple.venn(area1=area_CNSvsS2[1], area2=area_CNSvsBG3[1], area3
                             cat.cex = rep(1.3, 3))
 ```
 
-### The differences in gene expression level between central nervous system cells and S2 cells
+### Differences in gene expression level between central nervous system cells and S2 cells
 
 ```{r, echo = FALSE}
 plotSmear(CNSvsS2_adj, de.tags=rownames(CNSvsS2_dge$table), pch=20, cex=0.6)
 abline(h=c(-1, 0, 1), col=c("dodgerblue","yellow","dodgerblue"), lty=2)
 ```
 
-### The differences in gene expression level between central nervous system cells and BG3 cells
+### Differences in gene expression level between central nervous system cells and BG3 cells
 
 ```{r, echo = FALSE}
 plotSmear(CNSvsBG3_adj, de.tags=rownames(CNSvsBG3_dge$table), pch=20, cex=0.6)
 abline(h=c(-1, 0, 1), col=c("dodgerblue","yellow","dodgerblue"), lty=2)
 ```
 
-### The differences in gene expression level between BG3 and S2 cells
+### Differences in gene expression level between BG3 and S2 cells
 
 ```{r, echo = FALSE}
 plotSmear(BG3vsS2_adj, de.tags=rownames(BG3vsS2_dge$table), pch=20, cex=0.6)
@@ -250,7 +250,7 @@ counts_heatmap <- function(counts_matrix, cluster, rownames_value) {
 }
 ```
 
-### Expression levels for differentialy expressed genes in Central nervous system vs S2
+### Expression levels for differentialy expressed genes in central nervous system vs S2
 
 ```{r, echo=FALSE}
 CNSvsS2_data <- data_cpm[which(rownames(data_cpm) %in% rownames(CNSvsS2_dge)),]
@@ -259,7 +259,7 @@ counts_heatmap(CNSvsS2_data$counts, cluster = TRUE, rownames_value = F)
 
 ```
 
-### Expression levels for differentialy expressed genes in Central nervous system vs BG3
+### Expression levels for differentialy expressed genes in central nervous system vs BG3
 
 ```{r, echo=FALSE}
 CNSvsBG3_data <- data_cpm[which(rownames(data_cpm) %in% rownames(CNSvsBG3_dge)),]
@@ -297,9 +297,9 @@ sortedcounts_BG3vsS2 <- maxlogfc_genes(BG3vsS2_dge,50,data_cpm)
 ```
 
 
-### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in Central nervous system and S2 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in central nervous system vs S2 contrast
 
-```{r, echo=FALSE, fig.height=7}
+```{r, echo=FALSE, fig.height=8}
 
 pheatmap(mat = log10(sortedcounts_CNSvsS2$counts+1),
          col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
@@ -312,9 +312,9 @@ pheatmap(mat = log10(sortedcounts_CNSvsS2$counts+1),
 ```
 
 
-### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in Central nervous system and BG3 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in central nervous system vs BG3 contrast
 
-```{r, echo=FALSE, fig.height=7}
+```{r, echo=FALSE, fig.height=8}
 
 pheatmap(mat = log10(sortedcounts_CNSvsBG3$counts+1),
          col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
@@ -327,9 +327,9 @@ pheatmap(mat = log10(sortedcounts_CNSvsBG3$counts+1),
 ```
 
 
-### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in BG3 and S2 contrast
+### Expression levels for 50 differentialy expressed genes with the highest value of log fold change in BG3 vs S2 contrast
 
-```{r, echo=FALSE, fig.height=7}
+```{r, echo=FALSE, fig.height=8}
 
 pheatmap(mat = log10(sortedcounts_BG3vsS2$counts+1),
          col = colorRampPalette(brewer.pal(8, "PuBuGn"))(20),
