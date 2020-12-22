@@ -55,12 +55,16 @@ genes <- rownames(data)
 mart<-useMart(biomart = "ensembl",
               dataset = "dmelanogaster_gene_ensembl",
               host="ensembl.org")
-
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# here we need to suppress a warning on deprecated dplyr functions
 genes_mart <- getBM(
   filters="ensembl_gene_id",
   attributes=c("ensembl_gene_id", "external_gene_name", "chromosome_name", "start_position", "end_position", "strand"),
   values=genes,
   mart=mart)
+```
+```{r, echo=FALSE, message=FALSE}
 rownames(genes_mart) <- genes_mart$ensembl_gene_id
 
 #counts
