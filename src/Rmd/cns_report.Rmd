@@ -171,7 +171,7 @@ write.table(gene_table, "../../results/gene_table.tsv", quote = F, sep = "\t", r
 
 
 
-significant_genes <- function(qlf_data,alpha,logfc) {
+significant_genes <- function(qlf_data,alpha = Inf,logfc = -Inf) {
   #choose genes with abs(logfoldchange) >2 and adjusted p-value<0.05
   thresh_data <- qlf_data[which(abs(qlf_data$table$logFC)>logfc & qlf_data$table$adjPValue<alpha),]
   
@@ -186,13 +186,23 @@ BG3vsS2_dge<- significant_genes(BG3vsS2_adj,alpha = thr_alpha, logfc = thr_logfc
 ```
 
 
+### Numbers of differentialy expressed genes
 Gene set    | Count
 ------------|----------------:
-Central nervous system vs S2  | `r format(dim(CNSvsS2_dge)[1], big.mark=',')`
-Central nervous system vs BG3  | `r format(dim(CNSvsBG3_dge)[1], big.mark=',')`
-BG3 vs S2  | `r format(dim(BG3vsS2_dge)[1], big.mark=',')`
+Genes tested for differential expression | `r format(dim(CNSvsS2_adj)[1], big.mark=',')`
+Central nervous system vs S2 (FDR `r thr_alpha`) | `r format(dim(significant_genes(CNSvsS2_adj,alpha = thr_alpha))[1], big.mark=',')`
+Central nervous system vs BG3 (FDR `r thr_alpha`) | `r format(dim(significant_genes(CNSvsBG3_adj,alpha = thr_alpha))[1], big.mark=',')`
+BG3 vs S2 (FDR `r thr_alpha`) | `r format(dim(significant_genes(BG3vsS2_adj,alpha = thr_alpha))[1], big.mark=',')`
 
-### Venn Diagram
+Only the following set of differentialy expressed genes having absolute log~2~ fold change > `r thr_logfc` were further considered:
+
+Gene set    | Count
+------------|----------------:
+Central nervous system vs S2 (FDR `r thr_alpha`, abs. logFC > `r thr_logfc`) | `r format(dim(CNSvsS2_dge)[1], big.mark=',')`
+Central nervous system vs BG3 (FDR `r thr_alpha`, abs. logFC > `r thr_logfc`) | `r format(dim(CNSvsBG3_dge)[1], big.mark=',')`
+BG3 vs S2 (FDR `r thr_alpha`, abs. logFC > `r thr_logfc`) | `r format(dim(BG3vsS2_dge)[1], big.mark=',')`
+
+### Venn Diagram for three contrasts
 
 ```{r, echo=FALSE}
 #areas
