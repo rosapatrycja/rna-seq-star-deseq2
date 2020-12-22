@@ -163,7 +163,7 @@ for (gtd in names(gene_table_data))
   gene_table <- cbind(gene_table, this_gt)
 }
 
-write.table(gene_table, "../../src/Rmd/gene_table.tsv", quote = F, sep = "\t", row.names = F)
+write.table(gene_table, "../../results/gene_table.tsv", quote = F, sep = "\t", row.names = F)
 
 
 
